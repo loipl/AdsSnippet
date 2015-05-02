@@ -1,0 +1,28 @@
+{
+  "author": "Bui Diep <diepbuihuu@gmail.com>",
+  "name": "AdsSnipet",
+  "description": "Server for advertising",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jasonbhart/adserver.git"
+  },
+  "dependencies": {
+    "connect": "^3.3.4",
+    "csurf": "^1.6.5",
+    "express": "^4.11.1",
+    "express-stormpath": "^0.6.3",
+    "forms": "^1.1.1",
+    "install": "^0.1.8",
+    "jade": "^1.9.1",
+    "mongoose": "^3.8.22",
+    "npm": "^2.3.0",
+    "serve-static": "^1.8.1",
+    "xtend": "^4.0.0"
+  },
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  }
+}

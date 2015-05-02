@@ -1,0 +1,9 @@
+
+Here is a customer usecase
+[9:10:31 AM] Jason B. Hart: 1) User visits website
+[9:10:39 AM] Jason B. Hart: 2) signs up as a new user (customer)
+[9:10:55 AM] Jason B. Hart: 3) Customer logs in to UI (admin)
+[9:11:06 AM] Jason B. Hart: 4) Customer creates a new website object
+[9:11:23 AM] Jason B. Hart: 5) Customer adds a new 'placement' for the newly created website
+[9:11:57 AM] Jason B. Hart: 6) Customer specifies an ad (html) to run in the new placement
+[9:12:59 AM] Jason B. Hart: 7) Customer is given a snippet of code for this new website placement.  He copies this and pastes it into his website.  This snippet calls our api to get the ad html to display on the customer's website and then displays it to the website visitor.

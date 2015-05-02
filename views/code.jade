@@ -1,0 +1,8 @@
+div(id="adserver_tag", style="position:absolute; z-index:100; top:100px; left:100px;")
+    img(
+        style="height:20px; width:20px; cursor: pointer; float:right;", 
+        src="#{hostname}/public/icon/close-button.gif",
+        onclick='document.getElementById("adserver_tag").style.display="none";')
+    div(style="clear:both")
+    div(style="margin-right:20px;") !{placement.html}
+        

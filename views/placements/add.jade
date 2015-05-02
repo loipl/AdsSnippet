@@ -1,0 +1,48 @@
+html
+  head
+    title=title
+    link(
+      href='//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css',
+      rel='stylesheet'
+    )
+  body
+    div.container
+
+      div.page-header
+        h1 Add new placement
+
+      if errors
+        each error in errors
+          div.alert.alert-danger
+            span #{error.error}
+      if saved
+        div.alert.alert-success
+          span Your placement has been saved
+
+      form.login-form.form-horizontal(method='post', role='form')
+        input(name='_csrf', type='hidden', value=csrfToken)
+
+        div.form-group
+          label.col-sm-4 Placement Name
+          div.col-sm-8
+            input.form-control(
+              placeholder='Placement name',
+              required=true,
+              name='name',
+              type='text',
+              value=name)
+        div.form-group
+          label.col-sm-4 Html to display
+          div.col-sm-8
+            textarea.form-control(
+              placeholder='Html to display in your website',
+              required=true,
+              name='html')
+
+        div.form-group
+          div.col-sm-offset-4.col-sm-8
+            button.btn.btn-primary(type='submit') Save
+            button.btn.btn-danger(style='margin-left:10px;', onclick='window.location.href="/objects/edit/#{object_id}"; return false;') Cancel
+
+        div.pull-right
+          a(href="/") Return to home page

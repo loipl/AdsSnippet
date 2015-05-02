@@ -1,0 +1,41 @@
+html
+  head
+    title=title
+    link(
+      href='//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css',
+      rel='stylesheet'
+    )
+  body
+    div.container
+
+      div.page-header
+        h1 Placement List
+        
+      if objects.length != 0
+        table.table(data-toggle="table")
+          thead
+            tr
+              th Placements
+              th Embed code
+              th Object
+              th Action
+          tbody
+            each placement in placements
+              tr 
+                td #{placement.name}
+                td
+                  textarea(
+                    style="width:90%;"
+                  ) #{placement.snipet}
+                td 
+                  each object in objects
+                    if object._id == placement.object_id
+                      a(href="/objects/edit/#{object._id}") #{object.name}
+                td 
+                  a(href='/placements/edit/#{placement._id}') Edit
+                  a(href='/placements/delete/#{placement._id}', style='margin-left:10px;') Delete  
+        // button.btn.btn-primary(onclick='window.location.href="/placements/add?object_id=#{objects[0]._id}"; return false;') Add new placement
+      else
+        div No website found. Please create websites first.
+      div.pull-right
+        a(href="/") Return to home page
